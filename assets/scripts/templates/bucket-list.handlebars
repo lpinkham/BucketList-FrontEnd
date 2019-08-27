@@ -1,0 +1,39 @@
+{{#each buckets as |bucket|}}
+  <section data-id="{{bucket._id}}" class="center">
+    <table class="center">
+      <tr>
+        <td><h5>Bucket ID:</h5></td>
+        <td><p>  {{bucket._id}}  </p></td>
+      </tr><tr>
+        <td><h5>Title:</h5></td>
+        <td><p>  {{bucket.title}}  </p></td>
+      </tr>
+      <tr>
+        <td><h5>Place:</h5></td>
+        <td><p>  {{bucket.place}}  </p></td>
+      </tr>
+      <tr>
+        <td><h5>Complete By:</h5></td>
+        <td><p>  {{bucket.completeBy}}  </p></td>
+      </tr>
+      <tr>
+          <td><h5>Description:</h5></td>
+          <td><p> {{bucket.description}}  </p></td>
+      </tr>
+      <tr>
+        <td><h5>Share With:</h5></td>
+        <td><p>  {{bucket.shareWith}} </p></td>
+      </tr>
+      <tr>
+        <td><h5>Completed:</h5></td>
+        <td><p>  {{bucket.completed}}  </p></td>
+      </tr>
+      <tr>
+        <td><button class="btn btn btn-outline-dark mr-2 edit-btn" id="edit-btn">Edit</button></td>
+        <td><button class="btn btn btn-outline-dark mr-2 delete-btn" id="delete-btn">Delete</button></td>
+      </tr>
+  </table>
+
+  </section>
+
+{{/each}}

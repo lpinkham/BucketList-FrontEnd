@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Bucket List App</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,154 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Bucket List</h1>
+
+      <h5 id="message" class="message-header"></h5>
+  <div id="accordion">
+    <div class="card-body" id="headingSignInUp">
+      <div class="card right-align">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Sign-In / Sign-Up
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse centertop" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <div id="sign-in-up">
+            <div class="form">
+              <form id="sign-in" class="inline centertop">
+                <h5>Sign-In</h5>
+                <input type="email" name="credentials[email]" placeholder="Enter email address"><br />
+                <input type="password" name="credentials[password]" placeholder="Password"><br />
+                <button class="btn btn btn-outline-dark mr-2" id="sign-in-btn">Sign-In!</button>
+              </form>
+
+              <form id="sign-up" class="inline">
+                <h5>Register</h5>
+                <input type="email" name="credentials[email]" placeholder="email address (not a real one)"><br>
+                <input type="password" name="credentials[password]" placeholder="Password"><br>
+                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+                <button class="btn btn btn-outline-dark mr-2">Register!</button>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="card hide right-align" id="headingSignoutChangePW">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          My Account
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse centertop" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <div class="" id="myAccount">
+          <form id="change-password"  class="inline">
+          <h6>Change Your Password</h6>
+            <input type="password" name="passwords[old]" placeholder="Old Password"><br />
+            <input type="password" name="passwords[new]" placeholder="New Password"><br />
+          <button class="btn btn btn-outline-dark mr-2">Change Password</button>
+          </form>
+          <form id="sign-out"  class="inline">
+            <button class="btn btn btn-outline-dark mr-2">Sign Out</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <main>
+
+    <h1>Bucket List</h1>
+
+    <div id="Home-Page" class="">
+      <img src="./images/bucket.png" alt="bucket"/>
+    </div>
+
+    <div id="Create-A-Bucket" class="hide">
+      <form id="create-bucket"  class="create-bucket">
+        <h6>Create A Bucket</h6>
+        <label for="bucket[title]">Title:</label>
+        <input type="text" name="bucket[title]" required><br>
+
+        <label for="bucket[place]">Place:</label>
+        <input type="text" name="bucket[place]"><br>
+
+        <label for="bucket[description]">Description:</label>
+        <textarea name="bucket[description]" rows="3"></textarea><br>
+
+        <label for="bucket[shareWith]">Who Would you like to share this with?</label>
+        <input type="text" name="bucket[shareWith]"><br>
+
+        <label for="bucket[completeBy]">Complete By:</label>
+        <input type="text" name="bucket[completeBy]" placeholder="YYYY-MM-DD" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" title="YYYY-MM-DD"/><br>
+
+        <label for="bucket[completed]">Completed</label>
+        <input type="checkbox"><br>
+        <button class="btn btn btn-outline-dark mr-2">Create</button>
+      </form>
+
+      <div class="col-3"><button id="view-your-buckets-btn" class="btn btn btn-outline-dark mr-2">View your buckets!</button></div>
+
+      <!-- <div class="col-3 box">
+        <form id="get-a-bucket">
+          <h1>Get a bucket</h1>
+          <input type="text" name="bucket[_id]"><br>
+          <button id="get-a-bucket-btn" class="btn btn btn-outline-dark mr-2">Get a bucket!</button>
+        </form></div>
+ -->
+
+<!-- Delete a bucket used for testing but want to eventually delete using handlebars -->
+ <div class="col-3 box">
+   <form id="delete-a-bucket">
+     <h1>Delete a bucket</h1>
+     <input type="text" name="bucket[_id]"><br>
+     <button id="delete-a-bucket-btn" class="btn btn btn-outline-dark mr-2">Delete a bucket!</button>
+   </form>
+ </div>
+
+<!-- used for testing EDIT a single bucket. Want to have edit come from handlebars eventually -->
+                   <div class="col-3 box">
+                     <form id="edit-a-bucket" class="hide">
+                       <h1>Edit a bucket</h1>
+
+                       <label for="bucket[_id]">Id:</label>
+                       <input type="text" name="bucket[_id]" id="edit-bucket-id"><br>
+
+                       <label for="bucket[title]">Title:</label>
+                       <input type="text" name="bucket[title]" id="edit-bucket-title" value="" required><br>
+
+                       <label for="bucket[place]">Place:</label>
+                       <input type="text" name="bucket[place]" id="edit-bucket-place" value=""><br>
+
+                       <label for="bucket[description]">Description:</label>
+                       <textarea name="bucket[description]" rows="3" id="edit-bucket-description" value=""></textarea><br>
+
+                       <label for="bucket[shareWith]">Who Would you like to share this with?</label>
+                       <input type="text" name="bucket[shareWith]" id="edit-bucket-shareWith" value=""><br>
+
+                       <label for="bucket[completeBy]">Complete By:</label>
+                       <input type="text" name="bucket[completeBy]" placeholder="YYYY-MM-DD" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" title="YYYY-MM-DD" value="" id="edit-bucket-completeBy" /><br>
+
+                       <label for="bucket[completed]">Completed</label>
+                       <input type="checkbox" value="" id="edit-bucket-completed"><br>
+            <button id="edit-a-bucket-btn" class="btn btn btn-outline-dark mr-2">Update a bucket!</button>
+          </form>
+        </div>
+
+  </div>
+
+  <!-- used for displaying content from Handlebars -->
+      <div id="content" class="content"></div>
+        <div id="content2" class="content2"></div>
+  </main>
     </body>
 </html>

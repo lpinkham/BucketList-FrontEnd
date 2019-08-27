@@ -1,1 +1,128 @@
 @import '~bootstrap/scss/bootstrap';
+@import 'themes';
+
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+$deep-purple: #4f0882;
+
+body {
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+h1 {
+  color: dark gray;
+  font-family: inherit;
+  padding-top: 20px;
+  text-align: center;
+}
+
+h5 {
+  align-items: right;
+  text-align: right;
+}
+
+input {
+  margin: 4px 0;
+}
+
+form {
+  // align-content: left;
+  // align-items: left;
+  margin: 2px 50px 2px 50px;
+  padding: 2px;
+}
+
+label {
+  align-items: baseline;
+  text-align: left;
+}
+
+td {
+  color: red;
+  font-family: fantasy;
+  width: 50%;
+}
+
+p {
+  color: darkgray;
+  padding: 20px;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  // border: 2px solid red;
+}
+
+// .box {
+//   align-items: center;
+//   background-color: $white;
+//   border: 1px solid $white;
+//   color: $font-color;
+//   display: flex;
+//   height: 80px;
+//   justify-content: center;
+// }
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.centertop {
+  text-align: center;
+  // vertical-align: top;
+  vertical-align: top;
+}
+
+.create-bucket {
+  align-items: baseline;
+  text-align: left;
+  vertical-align: top;
+}
+
+// .description {
+//   color: darkgray;
+//   font-family: fantasy;
+//   font-size: 1.5em;
+//   padding-bottom: 40px;
+// }
+
+.hide {
+  display: none;
+}
+
+.inline {
+  align-content: center;
+  display: inline-block;
+  text-align: center;
+}
+
+.message-header {
+  text-align: center;
+}
+
+.my-account {
+  font-size: .75em;
+  text-align: right;
+}
+
+.right-align {
+  align-items: right;
+  text-align: right;
+}
+
+.sign-in-button {
+  border: 0;
+  font-family: cursive;
+  text-align: center;
+}
+
+.sign-in {
+  margin: 10px;
+  padding: 40px;
+}
