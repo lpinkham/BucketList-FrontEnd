@@ -99,13 +99,14 @@ const onUpdateBucket = event => {
 // used in handlebars edit button
 const onEditBucket = (event) => {
   const id = $(event.target).closest('section').data('id')
-  console.log('id is', id)
+  console.log('in onEditBucket and id is', id)
   // make call to API using the id to get a single bucket
   // replace the one section with an editable section (edit handlebars)
   api.getSingleBucket(id)
-    // .then(ui.getSingleBucketSuccess)
-    // .catch(ui.getSingleBucketFailure)
-    .then(ui.testShowEditBucketForm)
+    .then(ui.editHandlebarsFunction)
+  // .then(ui.getSingleBucketSuccess)
+  // .catch(ui.getSingleBucketFailure)
+  // .then(ui.testShowEditBucketForm)
     .catch(ui.failureMessage('Couldnt show edit bucket form'))
 }
 

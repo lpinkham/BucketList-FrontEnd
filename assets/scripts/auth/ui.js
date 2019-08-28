@@ -141,8 +141,17 @@ const testShowEditBucketForm = responseData => {
   $('#edit-bucket-shareWith').val(responseData.bucket.shareWith)
   $('#edit-bucket-completeBy').val(responseData.bucket.completeBy)
   $('#edit-bucket-completed').val(responseData.bucket.completed)
-
   $('.content').hide()
+}
+
+// trying to get an edit form in handlebars
+const editHandlebarsFunction = responseData => {
+  // $('#' + responseData.bucket._id).css('background', 'red')
+  const showEditBucketHTML = showEditBucketTemplate({ bucket: responseData.bucket })
+  $(`#${responseData.bucket._id}`).html(showEditBucketHTML)
+  // $(`#${responseData.bucket._id}`).css('background', 'red')
+  $(`#${responseData.bucket._id}`).html()
+// console.log(responseData)
 }
 
 const updateSingleBucketSuccess = responseData => {
@@ -176,5 +185,6 @@ module.exports = {
   deleteBucketFailure,
   testShowEditBucketForm,
   updateSingleBucketSuccess,
-  updateSingleBucketFailure
+  updateSingleBucketFailure,
+  editHandlebarsFunction
 }
