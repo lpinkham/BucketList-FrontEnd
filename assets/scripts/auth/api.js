@@ -61,19 +61,6 @@ const getYourBuckets = () => {
   })
 }
 
-// const getSingleBucket = formData => {
-//   console.log('in getSingleBucket')
-//   const fData = formData
-//   console.log('fData is ', fData)
-//   return $.ajax({
-//     url: config.apiUrl + '/buckets/' + formData.bucket._id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-
 const getSingleBucket = id => {
   // console.log('in getSingleBucket')
   return $.ajax({
