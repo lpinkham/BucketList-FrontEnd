@@ -31,7 +31,7 @@ input {
 }
 
 form {
-  margin: 2px 50px 2px 50px;
+  margin: 2px 50px;
   padding: 2px;
 }
 
@@ -57,17 +57,18 @@ table {
 }
 
 .bg-image {
-  // background-image: url('public/images/alaskaGlacier.png');
+  background-image: url('public/images/alaskaGlacier.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 
 }
+
 .bg-image2 {
-  // background-image: url('public/images/yellowStone.png');
+  background-image: url('public/images/yellowStone.png');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
 }
 
 .create-view-button {
@@ -88,8 +89,8 @@ table {
 
 .create-bucket {
   align-items: baseline;
-  background-color: white;
-  opacity: 0.9;
+  background-color: #ffffff;
+  opacity: .9;
   padding: 5px;
   text-align: left;
   vertical-align: top;
@@ -123,6 +124,11 @@ table {
   vertical-align: top;
   width: 100%;
 
+  button {
+    align-items: center;
+    text-align: center;
+  }
+
   h5 {
     text-align: center;
     color: red;
@@ -136,10 +142,7 @@ table {
     padding: 8px 10px;
     width: 100%;
   }
-  button {
-    align-items: center;
-    text-align: center;
-  }
+
   label {
     color: red;
   }
