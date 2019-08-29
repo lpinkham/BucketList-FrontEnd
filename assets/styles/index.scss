@@ -114,37 +114,37 @@ table {
   }
 }
 
-// .update-bucket {
-//   align-items: baseline;
-//   background-color: white;
-//   font-family: fantasy;
-//   padding: 5px;
-//   text-align: left;
-//   vertical-align: top;
-//   width: 100%;
-//
-//   h5 {
-//     text-align: center;
-//     color: red;
-//   }
-//   input[type=text], textarea {
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-//     box-sizing: border-box;
-//     display: inline-block;
-//     margin: 4px 0;
-//     padding: 8px 10px;
-//     width: 100%;
-//   }
-//   button {
-//     align-items: center;
-//     text-align: center;
-//   }
-//   label {
-//     color: red;
-//   }
+.update-bucket {
+  align-items: baseline;
+  background-color: white;
+  font-family: fantasy;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
 
-// }
+  h5 {
+    text-align: center;
+    color: red;
+  }
+  input[type=text], textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 4px 0;
+    padding: 8px 10px;
+    width: 100%;
+  }
+  button {
+    align-items: center;
+    text-align: center;
+  }
+  label {
+    color: red;
+  }
+
+}
 
 .head-title {
   color: #060c52;

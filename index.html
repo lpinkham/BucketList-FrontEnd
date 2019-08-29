@@ -135,8 +135,14 @@
             <label for="bucket[completeBy]">Taget date to complete by:</label>
             <input type="text" name="bucket[completeBy]" placeholder="YYYY-MM-DD" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" title="YYYY-MM-DD"/><br />
 
-            <label for="bucket[completed]">Completed</label>
-            <input type="checkbox"><br />
+            <!-- <label for="bucket[completed]">Completed</label>
+            <input type="checkbox"><br /> -->
+            <!-- <label for="bucket[completed]">Have you completed this?</label><br>
+            <input type="radio" name="bucket[completed]" value="false" checked> No, not yet.<br>
+            <input type="radio" name="bucket[completed]" value="true">Yes, check this off my list.<br> -->
+            <label for="bucket[completed]">Have you completed this?</label>
+            <input type="text" name="bucket[completed]"><br />
+
             <div class="center">
               <button class="btn-outline-dark mr-2 center">Create</button>
             </div>

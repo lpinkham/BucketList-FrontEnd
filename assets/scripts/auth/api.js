@@ -62,7 +62,6 @@ const getYourBuckets = () => {
 }
 
 const getSingleBucket = id => {
-  // console.log('in getSingleBucket')
   return $.ajax({
     url: config.apiUrl + '/buckets/' + id,
     method: 'GET',
@@ -83,15 +82,15 @@ const updateBucket = formData => {
   })
 }
 
-const deleteBucket = function (formData) {
-  return $.ajax({
-    url: config.apiUrl + '/buckets/' + formData.bucket._id,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const deleteBucket = function (formData) {
+//   return $.ajax({
+//     url: config.apiUrl + '/buckets/' + formData.bucket._id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 const deleteBucketHandlebars = function (id) {
   return $.ajax({
     url: config.apiUrl + '/buckets/' + id,
@@ -102,13 +101,6 @@ const deleteBucketHandlebars = function (id) {
   })
 }
 
-// const getAllBuckets = () => {
-//   return $.ajax({
-//     url: config.apiUrl + '/buckets',
-//     method: 'GET'
-//   })
-// }
-
 module.exports = {
   signUp,
   signIn,
@@ -116,7 +108,6 @@ module.exports = {
   signOut,
   createNewBucket,
   updateBucket,
-  deleteBucket,
   getYourBuckets,
   getSingleBucket,
   deleteBucketHandlebars
