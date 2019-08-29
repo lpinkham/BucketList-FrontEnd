@@ -1,5 +1,8 @@
 # Bucket List App
 
+![alt text](https://i.imgur.com/5mbxMvk.jpg "Bucket List App")
+[Imgur](https://i.imgur.com/5mbxMvk.jpg)
+
 Bucket List App is a single page application that a user can login and add items
 to their bucket list. Once you have completed an item just check it off as
 completed.

@@ -16,7 +16,6 @@ const signUpFailure = responseData => {
 }
 
 const signInSuccessful = responseData => {
-  console.log('in ui signInSUccessful and responseData is ', responseData)
   store.user = responseData.user
   $('form').trigger('reset')
   // new modals
