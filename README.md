@@ -4,6 +4,10 @@ Bucket List App is a single page application that a user can login and add items
 to their bucket list. Once you have completed an item just check it off as
 completed.
 
+## Links to deployed Site
+(https://lpinkham.github.io/BucketList-FrontEnd/)
+(https://git.heroku.com/secret-badlands-58963.git)
+
 ## Installation
 
 1.  [Download] both repo's
@@ -36,6 +40,7 @@ As a user I want to be able to checked off completed items on my list.
 3.  CSS
 4.  Javascript
 5.  jQuery
+6.  Handlebars
 
 ## Process and Planning
 The process and planning process started with an idea of what the app would do. From there I began with writting the user stories.
