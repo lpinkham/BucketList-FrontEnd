@@ -57,6 +57,7 @@ const onCreateBucket = event => {
 }
 
 const onGetYourBuckets = (event) => {
+  console.log('in onGetYourBucket')
   event.preventDefault()
   api.getYourBuckets()
     .then(ui.getBucketSuccess)
@@ -70,9 +71,9 @@ const onDeleteYourBuckets = (event) => {
   const form = event.target
   const formData = getFormFields(form)
   api.deleteBucket(formData)
-    .then(ui.deleteBucketsSuccess)
+    .then(ui.deleteBucketSuccess)
     // .then(onGetYourBuckets)
-    .catch(ui.deleteBucketsFailure)
+    .catch(ui.deleteBucketFailure)
 }
 
 // this delete is used in handlebars. It only needs the id, there is no form.
@@ -81,17 +82,21 @@ const onDeleteYourBucket = (event) => {
   const id = $(event.target).closest('section').data('id')
   console.log('id is', id)
   api.deleteBucketHandlebars(id)
-    .then(ui.deleteBucketsSuccess)
+    .then(ui.deleteBucketSuccess)
     // .then(onGetYourBuckets)
     .catch(ui.deleteBucketsFailure)
 }
 
-const onUpdateBucket = event => {
+const onUpdateBucket = (event) => {
   event.preventDefault()
+  // const id = $(event.target).closest('section').data('id')
+  // console.log('in onEditBucket and id is', id)
   const form = event.target
   const formData = getFormFields(form)
+  const f = formData
+  console.log('formdata is', f)
   api.updateBucket(formData)
-    .then(ui.updateBucketSuccessful)
+    .then(ui.updateSingleBucketSuccess)
   // .then(onGetYourBuckets)
     .catch(ui.updateBucketFailure)
 }
@@ -107,7 +112,7 @@ const onEditBucket = (event) => {
   // .then(ui.getSingleBucketSuccess)
   // .catch(ui.getSingleBucketFailure)
   // .then(ui.testShowEditBucketForm)
-    .catch(ui.failureMessage('Couldnt show edit bucket form'))
+    .catch(ui.onUpdateBucket)
 }
 
 // used for testing edit a bucket  from link on main page NOT from handlebars
