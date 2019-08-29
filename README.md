@@ -4,12 +4,14 @@
 [Imgur](https://i.imgur.com/5mbxMvk.jpg)
 
 Bucket List App is a single page application that a user can login and add items
-to their bucket list. Once you have completed an item just check it off as
+to their bucket list. Once you have completed an item just mark it as
 completed.
+
+To use create an account, sign-in and starting adding buckets to your app.
 
 ## Links to deployed Site
 (https://lpinkham.github.io/BucketList-FrontEnd/)
-(https://git.heroku.com/secret-badlands-58963.git)
+(https://secret-badlands-58963.herokuapp.com)
 
 ## Installation
 
@@ -18,13 +20,6 @@ completed.
     - (https://lpinkham.github.io/BucketList-FrontEnd)
 2.  Link to heroku https://git.heroku.com/secret-badlands-58963.git
 3.  Install dependencies with `npm install`.
-4.  Ensure that you have `nodemon` installed by running `npm install -g nodemon`.
-5.  Ensure the API is functioning properly by running `npm run server`.
-
-
-## Link TO ERD
-(https://imgur.com/a/nkEmtax)
-
 
 ## WIreframes and User Stories
 
