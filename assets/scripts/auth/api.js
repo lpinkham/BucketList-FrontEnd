@@ -105,9 +105,9 @@ const deleteBucket = function (formData) {
     }
   })
 }
-const deleteBucketHandlebars = function (formData) {
+const deleteBucketHandlebars = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/buckets/' + formData.bucket._id,
+    url: config.apiUrl + '/buckets/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
