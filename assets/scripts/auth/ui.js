@@ -6,12 +6,12 @@ const showBucketTemplate = require('../templates/bucket-list.handlebars')
 const showEditBucketTemplate = require('../templates/bucket-list-edit.handlebars')
 
 const signUpSuccessful = responseData => {
-  $('#form').trigger('reset')
+  $('form').trigger('reset')
   showAlert('You have registered successfully.', 'success')
 }
 
 const signUpFailure = responseData => {
-  $('#form').trigger('reset')
+  $('form').trigger('reset')
   showAlert('You have failed to register. Please try again.', 'danger')
 }
 
